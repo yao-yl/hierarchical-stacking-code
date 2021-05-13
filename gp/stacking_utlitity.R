@@ -144,7 +144,7 @@ hier_stacking=function(x,x_test, plpd){
     x_test= x_test,
     delta=1e-10,
     gamma_a=4,
-    gamma_b=0.5)
+    gamma_b=1)
   fit_stacking=sampling(stacking_stan_model, data=stacking_data)
   fit_extaract= extract(fit_stacking)
   w_train=fit_extaract$w_vec
